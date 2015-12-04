@@ -2656,54 +2656,6 @@ public class MyDatabase {
 		file.close();
 	}
 	
-	/*private static void readFromBinaryFile() throws FileNotFoundException, UnsupportedEncodingException, IOException
-	{
-		RandomAccessFile file = new RandomAccessFile("PHARMA_TRIALS_1000B.db", "r");		
-		
-		file.seek(0);		
-		while(file.getFilePointer() < file.length())
-		{			
-			for(int i=0;i<8; ++i)
-			{
-				switch(i)
-				{
-					case 0://int
-						System.out.print( file.readInt() + " ");				
-						break;
-					case 1://var char				
-						int len = file.read();				
-						byte[] bytes = new byte[len];
-						file.read(bytes);
-						System.out.print(new String(bytes) + " ");
-						
-						break;
-					case 2://char[]												
-						bytes = new byte[6];
-						file.read(bytes);
-						System.out.print(new String(bytes) + " ");
-						break;
-					case 3://short int											
-						System.out.print(file.readShort() + " ");	
-						break;
-					case 4://short int											
-						System.out.print(file.readShort() + " ");
-						break;
-					case 5://short int					
-						System.out.print(file.readShort() + " ");
-						break;
-					case 6://float											
-						System.out.print(file.readFloat() + " ");
-						break;
-					case 7:					
-						byte msk = file.readByte();
-						String[] output = UnMask(msk);						
-						break;					
-				}
-			}		
-		}
-		file.close();
-	}*/
-	
 	private static void writeIntIndexFile(Map<Integer, Long> map, PrintWriter file)
 	{
 		
